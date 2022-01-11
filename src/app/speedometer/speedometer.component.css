@@ -1,0 +1,19 @@
+#wrapper {
+  width: 310px; /* 150px + (10px stroke-width /2) */
+  height: 310px;
+  position: relative;
+}
+
+#meter {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(180deg);
+}
+
+#needle {
+  position: absolute;
+  border: solid gray 1px;
+  width: 153px; /* 155px - (2 * border)*/
+  top: 153px; /* 155px - (2 * border)*/
+  transform-origin: top right;
+}

@@ -1,0 +1,38 @@
+<h1>speedometer</h1>
+
+<div id="wrapper">
+  <svg id="meter">
+    <circle
+      id="low"
+      r="150"
+      cx="50%"
+      cy="50%"
+      stroke="orange"
+      stroke-width="10"
+      fill="none"
+    ></circle>
+  </svg>
+  <div id="needle" style="transform: rotate({{ position }}deg)" alt=""></div>
+</div>
+
+<div>
+  <div>
+    <p>
+      <strong>{{ position }}</strong>
+    </p>
+    <div>
+      <button (click)="add(-1)">Decrement</button>
+      <button (click)="add(1)">Increment</button>
+    </div>
+    <div>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="360"
+        (input)="handleInputPosition($event)"
+      />
+    </div>
+  </div>
+</div>
